@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <title>To do list</title>
+    <meta name="viewport" content="width=device-width,intiial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+
+    <body>
+        <div class="topBar">
+            <div class="search">
+                <input type="text" class="searchBar" placeholder="Search" name="searchBar" id="searchBar">
+            </div>
+        </div>
+        <div class="container">
+            <div class="sideBar">
+                <h2 id="sideText">To do list</h2>
+                <h4 id="myTask"><img src="../images/folder-2-line.png">My Tasks</h4>
+
+                <input type="text" class="list" placeholder="Add a new list" name="list" id="list">
+                
+                <ul class="taskInput" id="taskInputt">
+                
+                </ul>
+
+                <button id="delete"> Delete <img id="bin" src="../images/delete-bin-line.png"></button>
+
+            </div>
+            <div class="main">
+                <p id="taskName"></p>
+                <div class="modal" id="modal">
+                    <div class="modal-header">
+                        <div class="title">New Task</div> 
+                        <button data-close-button class="close-button" id="closeBtn">&times;</button>
+                    </div>
+                    <label for="nt">Task Name:</label>
+                    <input type="text" class="newTaskLabel" placeholder="Task Name:" name="taskName" id="nt">
+
+                    <label for="nd">Due Date:</label>
+                    <input type="date" class="newTaskLabel" placeholder="DD/MM/YYYY" name="taskDate" id="nd">
+
+                    <label for="priority">Priority:</label>
+                    <select name="priority" class="prio" id="np">
+                        <option label="Low">Low</option>
+                        <option label="Medium">Medium</option>
+                        <option label="High">High</option>
+                    </select>
+
+                    <input type="submit" value="Submit" id="submit">
+                </div>
+
+            </div>
+        </div>
+    </body>
+    <script src="main.js"></script>
+</html>

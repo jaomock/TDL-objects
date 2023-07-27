@@ -1,0 +1,253 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.topBar{
+    background-image: linear-gradient(to right, #06beb6,#48b1bf);
+    border-bottom: solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+}
+
+.searchBar{
+    background-image: url(../images/search-2-line.png);
+    background-position:right;
+    background-size: 20px;
+    background-repeat: no-repeat;
+}
+
+#searchBar{
+    height: 20px;
+    width: 400px;
+    border-radius: 5px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: 1fr;
+}
+
+.sideBar{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    height: 92vh;
+    padding: 1rem;
+    background-image: linear-gradient(#06beb6,#48b1bf);
+    color: white;
+    border-right: solid white;
+}
+
+.main{
+    grid-column-start: 2;
+    background-color: aqua;
+}
+
+#sideText{
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#myTask{
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+.test{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.list{
+    width: 250px;
+    border-radius: 5px;
+    background-image: url(../images/upload-line.png);
+    background-position:right;
+    background-size: 16px;
+    background-repeat: no-repeat;
+}
+
+#delete{
+    width: 260px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+#delete:hover{
+    background-color: pink;
+    color: white;
+}
+
+#bin{
+    height: 15px;
+    vertical-align: middle;
+}
+
+li{
+    list-style: none;
+    transition: 0.3s ease;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+li:hover{
+    background-color: rgb(26, 96, 201);
+    cursor: pointer;
+}
+
+.listBGBlue{
+    background-color: rgb(26, 96, 201);
+    
+}
+
+/* .listBG{
+    
+} */
+
+li,ul{
+    list-style-position: outside;
+
+}
+
+.plus{
+    height: 70px;
+    width: 70px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 25px;
+    cursor: pointer;
+}
+
+.newTaskLabel,.prio{
+    height: 200px;
+}
+
+.modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    background-color: white;
+    width: 300px;
+    max-width: 80%;
+    height: 300px;
+    padding: 2px;
+}
+
+.modal.active{
+    transform: translate(-50%,-50%) scale(1);
+}
+
+.modal-header{
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header .title{
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modal-header .close-button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#submit{
+    cursor: pointer;
+}
+
+#taskName{
+    font-size: 2em;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.taskBox{
+    height: 70px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 5px;
+    border-style: inset;
+    display: grid;
+    grid-template-columns: 50px 110px 1fr 85px 50px 50px;
+    grid-template-rows: 70px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.taskTitle{
+    font-size: 1em;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row: 1;
+    font-size: 1.2em;
+    align-items: center;
+}
+
+.taskDate{
+    grid-column-start: 2;
+    grid-row: 1;
+    font-size: 1.2em;
+}
+
+.priority{
+    grid-column-start: 4;
+    grid-row: 1;
+    font-size: 1.2em;
+}
+
+.edit{
+    height: 25px;
+    width: 25px;
+    grid-column-start: 5;
+    grid-row: 1;
+    cursor: pointer;
+}
+
+.dlt{
+    height: 25px;
+    width: 25px;
+    grid-column-start: 6;
+    grid-row: 1;
+    cursor: pointer;
+}
+
+.circle{
+    grid-column-start: 0;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    border: 2px solid red;
+    margin-left: 10px;
+}
+
+.gcircle{
+    grid-column-start: 0;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    border: 2px solid green;
+    margin-left: 10px;
+}
