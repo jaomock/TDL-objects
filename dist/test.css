@@ -4,7 +4,7 @@ body{
 }
 
 .topBar{
-    background-image: linear-gradient(to right, #ca1811,#751919);
+    background-image: linear-gradient(to right, #06beb6,#48b1bf);
     border-bottom: solid white;
     display: flex;
     justify-content: center;
@@ -36,15 +36,12 @@ body{
     grid-column-end: 2;
     height: 92vh;
     padding: 1rem;
-    background-image: linear-gradient(#ca1811,#751919);
+    background-image: linear-gradient(#06beb6,#48b1bf);
     color: white;
     border-right: solid white;
 }
 
-.main{
-    grid-column-start: 2;
-    background-color: rgb(255, 225, 243);
-}
+
 
 #sideText{
     display: flex;
@@ -252,16 +249,19 @@ li,ul{
     margin-left: 10px;
 }
 
-.fillBox{
+.main{
+    grid-column-start: 2;
+    background-color: aqua;
     display:flex;
+    justify-content: center;
+  align-items:center;
+}
+
+.fillBox{
+    display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    top: 35%;    
-    /*left: 50%;
-    margin-top: -50px;
-    margin-left: -50px; */
-    /* transform: translate(-50%,-50%) */
+  
 }
 
 .fillText{

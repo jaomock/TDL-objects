@@ -49,13 +49,9 @@ document.getElementById('list').addEventListener('keypress', function (e){
         let allListBGBlue = document.querySelectorAll('.listBGBlue')
         let newTask = document.createElement('li')
         newTask.textContent = input
-        // if(newTask.textContent === input){
-        //     alert('Please give your tasks a unique name!')
-        //     return
-        // }
 
         for(let i = 0; i < allList.length;i++){
-            if(input === allList[i].textContent){
+            if(input === allList[i].textContent){g
                 alert('Task name already exist')
                 return
             }
@@ -88,13 +84,14 @@ document.getElementById('list').addEventListener('keypress', function (e){
             }
         }
 
-/*remove pluss*/
 
         newTask.addEventListener('click', function(){
-//fix this shit?
             document.querySelectorAll('.taskBox').forEach(e => e.remove());
             let allPlus = document.querySelectorAll('.plus')
-            
+
+            taskName.textContent = newTask.textContent
+            topT = newTask.textContent
+
             createTask()
             
             if(allPlus.length >= 1){
@@ -116,10 +113,6 @@ document.getElementById('list').addEventListener('keypress', function (e){
                 closeModal()
             })
 
-            taskName.textContent = newTask.textContent
-            topT = newTask.textContent
-
-            // console.log(projlist[test])
             document.querySelector('.fillBox').remove()
         })
 
@@ -143,7 +136,6 @@ document.getElementById('list').addEventListener('keypress', function (e){
             } else {
              dltBox[i].remove()
             }
-            // dltBox[0].remove()
         })
         
 }   
@@ -154,7 +146,6 @@ deleteBtn.addEventListener('click', function(){
     fillContent()
 })
 
-//
 
 function closeModal(){
     modal.classList.remove('active')
@@ -229,34 +220,7 @@ if(plLoop[i] === test ){
                     console.log(projlist[test])
                 }
             }
-            // delete cTask[c]
-            // const newArray = projlist[test].filter(element => {
-            //     if (Object.keys(element).length !== 0){
-            //         return true
-            //     }
-            //     return false
-            // })
-            // projlist[test].splice(0,projlist[test].length, newArray)
 
-            // projlist[test].slice([c],0)
-
-            // console.log(cTask)
-            // console.log(projlist[test])
-            
-            // for( x = 0; x < projlist[test].length; x++){
-            //     console.log(projlist[test](e).taskName)
-            //     let name = projlist[test].taskName
-            //     if(name === projlist[test].taskName){
-            //      delete projlist[test]
-            //     }
-            // }
-            
-            // if(projlist[test].length === 1){
-            //     projlist[test].splice(0,1)
-            // } else {
-            // projlist[test].splice(e,1)
-            // }
-            // console.log(projlist[test])
         })
 
         circle.addEventListener('click', function(){
@@ -326,7 +290,7 @@ function createTask(){
             taskBox.style.color = "black"
         }
     })
-//match objectkey with box task title to return index
+
     dlt.addEventListener('click', function(){
         taskBox.remove()
         
@@ -335,7 +299,6 @@ function createTask(){
         for(let i = 0; i < projlist[test].length; i++){
             if(fSib === projlist[test][i].taskName){
                 projlist[test].splice(i,1)
-                console.log(projlist[test])
             }
         }
         
